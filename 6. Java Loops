@@ -1,0 +1,137 @@
+Java Loops-
+
+
+Loops can execute a block of code as long as a specified condition is reached.
+
+The while loop loops through a block of code as long as a specified condition is true:
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int day = 1;
+        
+       while(day < 5)
+       {
+           System.out.println("val" + day);
+           day++;
+       }
+   
+    }
+}
+
+
+Do not forget to increase the variable used in the condition, otherwise the loop will never end!
+
+
+Do While Loop-
+
+The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+int i = 0;
+do {
+  System.out.println(i);
+  i++;
+}
+while (i < 5);
+
+
+
+class Main {
+    public static void main(String[] args) {
+        int day = 1;
+        
+        do{
+             System.out.println("val" + day);
+           day++;
+        }
+       while(day < 5);
+   
+    }
+}
+
+Do not forget to increase the variable used in the condition, otherwise the loop will never end!
+
+
+Java For Loop
+
+When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
+
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+Statement 1 is executed (one time) before the execution of the code block.
+Statement 2 defines the condition for executing the code block.
+Statement 3 is executed (every time) after the code block has been executed.
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+       for(int i = 0; i <10; i++)
+       {
+           System.out.println("i values is" + i);
+       }
+    }
+}
+
+_______________________________________
+
+Nested Loops -
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+       for(int i = 0; i <10; i++)
+       {
+            for(int j = 0; j <10; j++){
+                 System.out.println("i values is" + i + j);
+            }
+          
+       }
+    }
+}
+
+Loop keeps executing till condition is satisfied 
+
+
+Control comes to outer loop , then goes to inner loop waits for execution
+
+______________________________________
+
+Java Continue
+The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    continue;
+  }
+  System.out.println(i);
+}
+
+
+You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.
+The break statement can also be used to jump out of a loop.
+This example stops the loop when i is equal to 4:
+Example
+Get your own Java Server
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;
+  }
+  System.out.println(i);
+}
+
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    continue;
+  }
+  System.out.println(i);
+}
+
+
