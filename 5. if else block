@@ -1,0 +1,74 @@
+Java if else
+
+Java has the following conditional statements:
+* Use if to specify a block of code to be executed, if a specified condition is true
+* Use else to specify a block of code to be executed, if the same condition is false
+* Use else if to specify a new condition to test, if the first condition is false
+* Use switch to specify many alternative blocks of code to be executed
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+     int time =30;
+     
+     if(time > 40){
+         System.out.println("if executed");
+     }
+     else{
+         System.out.println("else executed"); 
+     }
+    }
+}
+
+________________________
+
+
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+
+
+_______
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+     int time =90;
+     
+     if(time > 40){
+         System.out.println("if executed");
+     }
+     else if(time > 20){
+          System.out.println("else if executed");
+     }
+     else{
+         System.out.println("else executed"); 
+     }
+    }
+}
+
+________________
+
+Ternary operator-
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int time = 20;
+    String result = time > 30 ? "greater" : "smaller";
+    System.out.println("result is" + result);
+    }
+}
+
+
+
