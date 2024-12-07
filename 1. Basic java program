@@ -1,0 +1,22 @@
+The name of the class has to be same of the file name, one class has to be public
+
+Class names start with uppercase
+
+method names in small case
+
+public class Main{
+    public static void main(String[] args)
+    {
+    System.out.println("Hello world");
+    }
+}
+
+
+
+camleCase
+
+addNumbers
+
+PascalCase
+
+MainClass
