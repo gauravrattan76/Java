@@ -57,6 +57,20 @@ boolean myBool = true;
 String myText = "Hello";
 
 
+public class Main{
+    public static void main(String[] args)
+    {
+    int num = 32;
+    String name = "gaurav";
+    char ch = 'A';
+    float af = 122.3f;
+    boolean isString = false;
+    
+    System.out.println(num + name + ch + af + isString);
+    }
+}
+
+
 
 
 
