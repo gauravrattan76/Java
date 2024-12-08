@@ -1,0 +1,204 @@
+Java Oops-
+__________________
+
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+
+OOP stands for Object-Oriented Programming.
+Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.
+
+
+
+Object-oriented programming has several advantages over procedural programming:
+* OOP is faster and easier to execute
+* OOP provides a clear structure for the programs
+* OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+* OOP makes it possible to create full reusable applications with less code and shorter development time
+Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.
+
+
+Classes and objects are the two main aspects of object-oriented programming.
+
+Class  - car
+Object - tata, ford, Maruti
+
+
+So, a class is a template for objects, and an object is an instance of a class.
+
+When the individual objects are created, they inherit all the variables and methods from the class.
+
+
+Java is an object-oriented programming language.
+Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+A Class is like an object constructor, or a "blueprint" for creating objects.
+
+
+Public class Main{
+Logic goes here
+}
+
+Class name starts with pascal case or caps and should match with the file name
+
+Create an Object
+In Java, an object is created from a class. We have already created the class named Main, so now we can use this to create objects.
+To create an object of Main, specify the class name, followed by the object name, and use the keyword new:
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+public class Main {
+ int x = 45;
+ public static void main(String[] args){
+        Main myObject = new Main();
+        System.out.println(myObject.x);
+ }
+}
+
+________________
+
+We can create multiple objects as well
+
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj1 = new Main();  // Object 1
+    Main myObj2 = new Main();  // Object 2
+    System.out.println(myObj1.x);
+    System.out.println(myObj2.x);
+  }
+}
+
+You can also create an object of a class and access it in another class. This is often used for better organization of classes (one class has all the attributes and methods, while the other class holds the main() method (code to be executed)).
+Remember that the name of the java file should match the class name. In this example, we have created two files in the same directory/folder:
+* Main.java
+* Second.java
+
+
+
+public class Main {
+  int x = 5;
+}
+Second.java
+class Second {
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj.x);
+  }
+}
+
+
+__________________
+
+Java class Attributes-
+
+In the previous chapter, we used the term "variable" for x in the example (as shown below). It is actually an attribute of the class. Or you could say that class attributes are variables within a class:
+
+public class Main {
+  int x = 5;
+  int y = 3;
+}
+
+
+
+Another term for class attributes is fields.
+
+
+Fields or attributes are same things
+
+
+You can access attributes by creating an object of the class, and by using the dot syntax (.):
+The following example will create an object of the Main class, with the name myObj. We use the x attribute on the object to print its value:
+Example
+Create an object called "myObj" and print the value of x:
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj.x);
+  }
+}
+
+
+You can also modify attribute values:
+
+Example
+Set the value of x to 40:
+public class Main {
+  int x;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    myObj.x = 40;
+    System.out.println(myObj.x);
+  }
+}
+
+
+If you don't want the ability to override existing values, declare the attribute as final:
+
+
+public class Main {
+  final int x = 10;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    myObj.x = 25; // will generate an error: cannot assign a value to a final variable
+    System.out.println(myObj.x);
+  }
+}
+
+
+
+public class Main {
+  final int x = 10;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    myObj.x = 25; // will generate an error: cannot assign a value to a final variable
+    System.out.println(myObj.x);
+  }
+}
+
+
+
+_____________
+
+
+If you create multiple objects of one class, you can change the attribute values in one object, without affecting the attribute values in the other:
+Example
+Change the value of x to 25 in myObj2, and leave x in myObj1 unchanged:
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj1 = new Main();  // Object 1
+    Main myObj2 = new Main();  // Object 2
+    myObj2.x = 25;
+    System.out.println(myObj1.x);  // Outputs 5
+    System.out.println(myObj2.x);  // Outputs 25
+  }
+}
+
+
+
+public class Main {
+  String fname = "John";
+  String lname = "Doe";
+  int age = 24;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println("Name: " + myObj.fname + " " + myObj.lname);
+    System.out.println("Age: " + myObj.age);
+  }
+}
+
+
+
+
+
