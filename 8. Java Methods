@@ -1,0 +1,163 @@
+Java Methods-
+_________________________
+
+A method is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a method.
+Methods are used to perform certain actions, and they are also known as functions.
+Why use methods? To reuse code: define the code once, and use it many times.
+
+
+Ex
+
+public class Main {
+  static void myMethod() {
+    // code to be executed
+  }
+}
+
+
+
+Static means method belongs to Main class not object of an main class
+
+Void means methods returns nothing
+
+
+
+public class Main {
+  static void myMethod() {
+    System.out.println("I just got executed!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+
+// Outputs "I just got executed!"
+
+
+_________
+
+
+Passing params to method
+
+class Main {
+    static void myMethod(String name){
+        System.out.println("this is from my method" + name);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Main.myMethod("Gaurav");
+          Main.myMethod("Rattan");
+    }
+}
+
+
+
+Here name is parameter and Gaurav is agurment
+
+___________________________
+
+class Main {
+    static int multiply5(int x){
+      return 5*x;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+         System.out.println(Main.multiply5(4));
+        
+        
+    }
+}
+
+____________________
+
+Method overloading
+
+Method overloading is method with same name but with different params
+
+Type and number can be different
+
+Multiple methods can have the same name as long as the number and/or type of parameters are different.
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    static int calSum(int x, int y){
+      return x + y;
+    }
+    
+    static double calSum(double x, double y){
+      return x + y;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+         System.out.println(Main.calSum(2,3));
+          System.out.println(Main.calSum(2.4,3.6));
+    }
+}
+
+
+______________
+
+
+Java Scope -
+
+Java Scope
+In Java, variables are only accessible inside the region they are created. This is called scope.
+
+
+
+Variables declared directly inside a method are available anywhere in the method following the line of code in which they were declared:
+
+
+
+public class Main {
+  public static void main(String[] args) {
+
+    // Code here CANNOT use x
+
+    int x = 100;
+
+    // Code here can use x
+    System.out.println(x);
+  }
+}
+
+
+A block of code refers to all of the code between curly braces {}.
+Variables declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared:
+
+
+public class Main {
+  public static void main(String[] args) {
+
+    // Code here CANNOT use x
+
+    { // This is a block
+
+      // Code here CANNOT use x
+
+      int x = 100;
+
+      // Code here CAN use x
+      System.out.println(x);
+
+    } // The block ends here
+
+  // Code here CANNOT use x
+
+  }
+}
+
+
+
+A block of code may exist on its own or it can belong to an if, while or for statement. In the case of for statements, variables declared in the statement itself are also available inside the block's scope.
+
+
