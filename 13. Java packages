@@ -1,0 +1,64 @@
+Java Packages-
+________________________
+
+
+Java Packages & API
+A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. Packages are divided into two categories:
+* Built-in Packages (packages from the Java API)
+* User-defined Packages (create your own packages)
+
+
+
+
+Built-in Packages
+The Java API is a library of prewritten classes, that are free to use, included in the Java Development Environment.
+
+
+
+The library is divided into packages and classes. Meaning you can either import a single class (along with its methods and attributes), or a whole package that contain all the classes that belong to the specified package.
+
+
+import package.name.Class;   // Import a single class
+import package.name.*;   // Import the whole package
+
+
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args)
+    {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("please enter user inout");
+        String str = obj.nextLine();
+        System.out.println("output val is" + str);
+    }
+}
+
+
+
+To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation. In our example, we will use the nextLine() method, which is used to read a complete line:
+
+
+There are many packages to choose from. In the previous example, we used the Scanner class from the java.util package. This package also contains date and time facilities, random-number generator and other utility classes.
+To import a whole package, end the sentence with an asterisk sign (*). The following example will import ALL the classes in the java.util package:
+
+
+import java.util.*;
+
+
+
+To create a package, use the package keyword:
+
+
+package mypack;
+class MyPackageClass {
+  public static void main(String[] args) {
+    System.out.println("This is my package!");
+  }
+}
+
+
+
+
+
