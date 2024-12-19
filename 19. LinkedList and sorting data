@@ -1,0 +1,186 @@
+
+
+
+Java LinkedList
+In the previous chapter, you learned about the ArrayList class. The LinkedList class is almost identical to the ArrayList:
+Example
+Get your own Java Server
+// Import the LinkedList class
+import java.util.LinkedList;
+
+public class Main {
+  public static void main(String[] args) {
+    LinkedList<String> cars = new LinkedList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+
+
+
+The LinkedList class is a collection which can contain many objects of the same type, just like the ArrayList.
+
+
+The LinkedList class has all of the same methods as the ArrayList class because they both implement the List interface. This means that you can add items, change items, remove items and clear the list in the same way.
+
+
+How the ArrayList works
+The ArrayList class has a regular array inside it. When an element is added, it is placed into the array. If the array is not big enough, a new, larger array is created to replace the old one and the old one is removed.
+
+
+
+
+
+How the LinkedList works
+The LinkedList stores its items in "containers." The list has a link to the first container and each container has a link to the next container in the list. To add an element to the list, the element is placed into a new container and that container is linked to one of the other containers in the list.
+
+Use an ArrayList for storing and accessing data, and LinkedList to manipulate data.
+
+
+LinkedList Methods
+For many cases, the ArrayList is more efficient as it is common to need access to random items in the list, but the LinkedList provides several methods to do certain operations more efficiently:
+Method	Description	Try it
+addFirst()	Adds an item to the beginning of the list	Try it »
+addLast()	Add an item to the end of the list	Try it »
+removeFirst()	Remove an item from the beginning of the list	Try it »
+removeLast()	Remove an item from the end of the list	Try it »
+getFirst()	Get the item at the beginning of the list	Try it »
+getLast()	Get the item at the end of the list	Try it »
+
+
+List sorting-
+
+
+Another useful class in the java.util package is the Collections class, which include the sort() method for sorting lists alphabetically or numerically.
+
+
+import java.util.ArrayList;
+import java.util.Collections;  // Import the Collections class
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+
+    Collections.sort(cars);  // Sort cars
+
+    for (String i : cars) {
+      System.out.println(i);
+    }
+  }
+}
+ 
+Try it Yourself »
+Sort an ArrayList of Integers numerically in ascending order:
+Example
+import java.util.ArrayList;
+import java.util.Collections;  // Import the Collections class
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+    myNumbers.add(33);
+    myNumbers.add(15);
+    myNumbers.add(20);
+    myNumbers.add(34);
+    myNumbers.add(8);
+    myNumbers.add(12);
+
+    Collections.sort(myNumbers);  // Sort myNumbers
+
+    for (int i : myNumbers) {
+      System.out.println(i);
+    }
+  }
+}
+
+
+
+Reverse the Order
+You can also sort a list in reverse order, by using the reverseOrder() method.
+In the following example, we sort an ArrayList of Strings alphabetically in reverse/descending order:
+
+
+
+import java.util.ArrayList;
+import java.util.Collections;  // Import the Collections class
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+
+    Collections.sort(cars, Collections.reverseOrder()); // Sort myNumbers
+
+    for (String i : cars) {
+      System.out.println(i);
+    }
+  }
+}
+
+
+
+import java.util.ArrayList;
+import java.util.Collections;  // Import the Collections class
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+    myNumbers.add(33);
+    myNumbers.add(15);
+    myNumbers.add(20);
+    myNumbers.add(34);
+    myNumbers.add(8);
+    myNumbers.add(12);
+
+    Collections.sort(myNumbers, Collections.reverseOrder()); // Sort myNumbers
+
+    for (int i : myNumbers) {
+      System.out.println(i);
+    }
+  }
+}
+
+
+
+_________
+
+
+Sorting list and int
+
+
+Another useful class in the java.util package is the Collections class, which include the sort() method for sorting lists alphabetically or numerically.
+
+
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code onlinerr
+import java.util.*;
+
+class Main {
+    public static void main(String[] args){
+  LinkedList<Integer> lk = new LinkedList<Integer>();
+  lk.add(12);
+  lk.add(23);
+  lk.add(34);
+  Collections.sort(lk, Collections.reverseOrder());
+     System.out.println(lk);
+    }
+}
+
+
+
+
+
+
