@@ -1,0 +1,188 @@
+ArrayList Java-
+_____________________________________
+
+The ArrayList class is a resizable array, which can be found in the java.util package.
+The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want. The syntax is also slightly different:
+
+
+. For example, to add elements to the list, use the add() method:
+
+
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+
+
+ For example, to add elements to the list, use the add() method:
+
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+
+
+You can also add an item at a specified position by referring to the index number:
+
+cars.add(0, "Mazda");
+
+
+To access an element in the ArrayList, use the get() method and refer to the index number:
+Example
+cars.get(0);
+
+
+To modify an element, use the set() method and refer to the index number:
+Example
+cars.set(0, "Opel");
+
+
+
+To remove an element, use the remove() method and refer to the index number:
+Example
+cars.remove(0);
+
+To remove all the elements in the ArrayList, use the clear() method:
+
+Example
+cars.clear();
+
+
+To find out how many elements an ArrayList have, use the size method:
+cars.size();
+
+
+Iteration with for loop-
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code onlinerr
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+      ArrayList<String> cars = new ArrayList<String>();
+      cars.add("ferrari");
+      cars.add("bmw");
+       cars.add("porsche");
+      cars.add("audi");
+      for(int i = 0; i < cars.size(); i ++)
+      {
+          System.out.println(cars.get(i));
+      }
+    }
+}
+
+
+Iteration with for each loop-
+
+
+Foreach loop in arraylist-
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code onlinerr
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+      ArrayList<String> cars = new ArrayList<String>();
+      cars.add("ferrari");
+      cars.add("bmw");
+       cars.add("porsche");
+      cars.add("audi");
+     for(String car: cars)
+     {
+         System.out.println(car);
+     }
+    }
+}
+
+
+
+Elements in an ArrayList are actually objects. In the examples above, we created elements (objects) of type "String". Remember that a String in Java is an object (not a primitive type). To use other types, such as int, you must specify an equivalent wrapper class: Integer. For other primitive types, use: Boolean for boolean, Character for char, Double for double, etc:
+
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code onlinerr
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+      ArrayList<Integer> numbers = new ArrayList<Integer>();
+      numbers.add(1);
+       numbers.add(2);
+        numbers.add(3);
+         numbers.add(4);
+         System.out.println(numbers);
+    }
+}
+
+
+Sort an ArrayList
+Another useful class in the java.util package is the Collections class, which include the sort() method for sorting lists alphabetically or numerically:
+
+
+
+
+import java.util.ArrayList;
+import java.util.Collections;  // Import the Collections class
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    Collections.sort(cars);  // Sort cars
+    for (String i : cars) {
+      System.out.println(i);
+    }
+  }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code onlinerr
+import java.util.ArrayList;
+import java.util.Collections;
+
+class Main {
+    public static void main(String[] args) {
+      ArrayList<Integer> numbers = new ArrayList<Integer>();
+      numbers.add(18);
+       numbers.add(10);
+        numbers.add(3);
+         numbers.add(40);
+         Collections.sort(numbers);
+         System.out.println(numbers);
+    }
+}
+
+
+
+
+
+
+
+
