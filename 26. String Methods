@@ -1,0 +1,119 @@
+String methods -
+
+
+Strings are used for storing text.
+A String variable contains a collection of characters surrounded by double quotes:
+
+
+String greeting = "Hello";
+
+
+
+A String in Java is actually an object, which contain methods that can perform certain operations on strings. For example, the length of a string can be found with the length() method:
+
+
+There are many string methods available, for example toUpperCase() and toLowerCase():
+Example
+String txt = "Hello World";
+System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // Outputs "hello world"
+
+
+
+Finding a Character in a String
+The indexOf() method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace):
+Example
+String txt = "Please locate where 'locate' occurs!";
+System.out.println(txt.indexOf("locate")); // Outputs 7
+
+
+
+Java counts positions from zero.
+0 is the first position in a string, 1 is the second, 2 is the third ...
+
+
+_______
+
+
+charAt()
+
+Method-
+
+The charAt() method returns the character at the specified index in a string.
+
+
+public class Main extends Thread {
+
+  public static void main(String[] args) {
+     String st = "hello gaurav";
+     System.out.println("length is" + st.charAt(0));
+  }
+}
+
+
+_____
+
+
+Code point at-
+
+
+
+
+Return the Unicode of the first character in a string (the Unicode value of "H" is 72):
+String myStr = "Hello";
+int result = myStr.codePointAt(0);
+System.out.println(result);
+
+
+_____
+
+
+Contains -
+
+String myStr = "Hello";
+System.out.println(myStr.contains("Hel"));   // true
+System.out.println(myStr.contains("e"));     // true
+System.out.println(myStr.contains("Hi"));    // false
+
+
+
+String myStr = "Hello planet earth, you are a great planet.";
+System.out.println(myStr.indexOf("planet"));
+
+
+
+Join method-
+
+
+public class Main extends Thread {
+
+  public static void main(String[] args) {
+ String fruits = String.join(" ", "Orange", "Apple", "Mango");
+System.out.println(fruits);
+  }
+}
+
+
+
+String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+System.out.println(txt.length());
+
+
+
+String myStr = "Split a string by spaces, and also punctuation.";
+String regex = "[,\\.\\s]";
+String[] myArray = myStr.split(regex);
+for (String s : myArray) {
+  System.out.println(s);
+}
+
+public class Main extends Thread {
+
+  public static void main(String[] args) {
+String myStr = "Hello";
+char[] myArray = myStr.toCharArray();
+System.out.println(myArray[0]);
+  }
+}
+
+
