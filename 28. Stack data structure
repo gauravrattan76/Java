@@ -1,0 +1,41 @@
+Stack data structure-
+
+Lifo data structure
+
+
+
+import java.util.Arrays;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Stack;
+
+public class Main {
+    public static void main(String[] args) {
+   Stack<Integer> st = new Stack<Integer>();
+   st.push(23);
+        st.push(32);
+        st.push(43);
+
+   System.out.println(st);
+   int data = st.search(23);
+        System.out.println(st);
+        System.out.println(data);
+    }
+}
+
+
+
+
+Push method to add items to stack
+
+Pop to get item and remove it from top of stack
+
+
+Peek to get top event doesn’t remove item from stack
+
+
+Search to get index of item stats from 1 and from top
+
+
+
+
+
