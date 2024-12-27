@@ -1,0 +1,119 @@
+Size of the linked list
+
+
+
+class Main{
+    Node head;
+    private int size;
+    Main(){
+        this.size = 0;
+    }
+    class Node{
+        String data;
+        Node next;
+
+        public Node(String data)
+        {
+            this.data = data;
+            this.next =null;
+            size++;
+        }
+    }
+
+    public void addFirst(String data)
+    {
+        Node newnode = new Node(data);
+        if(head == null)
+        {
+            head = newnode;
+            return;
+        }
+        newnode.next = head;
+        head = newnode;
+    }
+
+    public void addLast(String data)
+    {
+        Node newnode = new Node(data);
+        if(head == null)
+        {
+            head = newnode;
+            return;
+        }
+        Node currnode = head;
+        while(currnode.next != null)
+        {
+            currnode = currnode.next;
+        }
+        currnode.next = newnode;
+    }
+
+    public void deleteFirst()
+    {
+        if(head == null)
+        {
+           System.out.print("no data");
+        }
+        size--;
+        head = head.next;
+
+    }
+
+    public void deleteLast()
+    {
+        if(head == null)
+        {
+            System.out.print("no data");
+        }
+        size--;
+        if(head.next == null)
+        {
+            head = null;
+        }
+        Node secondlast  = head;
+        Node lastNode = head.next;
+        while(lastNode.next != null)
+        { lastNode = lastNode.next;
+            secondlast = secondlast.next;
+
+        }
+        secondlast.next = null;
+    }
+
+    public void printList()
+    {
+        if(head == null)
+        {
+           System.out.print("empty list");
+        }
+        Node currnode = head;
+        while(currnode!= null)
+        {
+            System.out.print("--" + currnode.data);
+            currnode = currnode.next;
+        }
+
+    }
+
+    public int getSize(){
+        return  size;
+    }
+
+    public  static void main(String[] args)
+    {
+        Main lkls = new Main();
+        lkls.addFirst("red");
+        lkls.addFirst("blue");
+        lkls.addFirst("green");
+        lkls.addLast("greenatlast");
+        lkls.printList();
+
+//        lkls.deleteFirst();
+//        lkls.printList();
+        System.out.println("******");
+        lkls.deleteLast();
+        lkls.printList();
+        System.out.println("******");
+        System.out.println(lkls.getSize());
+    }
+}
