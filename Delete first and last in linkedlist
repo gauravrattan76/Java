@@ -1,0 +1,56 @@
+Delete linked list
+
+
+To delete first set head = head.next
+
+
+For last
+
+
+Create second last and last 
+
+Sl = head;
+Last = head.next
+
+
+Last.next != null iterate and then second last.next = null
+
+
+To delete first 
+
+
+
+    public void deleteFirst()
+    {
+        if(head == null)
+        {
+           System.out.print("no data");
+        }
+        head = head.next;
+
+    }
+
+
+
+
+    public void deleteLast()
+    {
+        if(head == null)
+        {
+            System.out.print("no data");
+        }
+        if(head.next == null)
+        {
+            head = null;
+        }
+        Node secondlast  = head;
+        Node lastNode = head.next;
+        while(lastNode.next != null)
+        { lastNode = lastNode.next;
+            secondlast = secondlast.next;
+
+        }
+        secondlast.next = null;
+    }
+
+   
