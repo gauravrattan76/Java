@@ -1,0 +1,108 @@
+Linked list indepth-
+
+Its  a linear list
+Consist of nodes
+Each node has data and next which is point to new node
+
+
+
+To ad first ‘
+
+
+New node.next = head;
+Head = newnode
+
+
+
+To add last
+
+
+Node currnode = head;
+While(currnode.next != null)
+{
+currnode.currnode.next
+}
+
+currnode.next = new node
+
+
+
+For print
+
+
+currnode(!= null)
+{
+Currnode = currnode.next;
+}
+
+
+
+Add first add last and print list code-
+
+
+class Main{
+    Node head;
+    class Node{
+        String data;
+        Node next;
+
+        public Node(String data)
+        {
+            this.data = data;
+            this.next =null;
+        }
+    }
+
+    public void addFirst(String data)
+    {
+        Node newnode = new Node(data);
+        if(head == null)
+        {
+            head = newnode;
+            return;
+        }
+        newnode.next = head;
+        head = newnode;
+    }
+
+    public void addLast(String data)
+    {
+        Node newnode = new Node(data);
+        if(head == null)
+        {
+            head = newnode;
+            return;
+        }
+        Node currnode = head;
+        while(currnode.next != null)
+        {
+            currnode = currnode.next;
+        }
+        currnode.next = newnode;
+    }
+
+    public void printList()
+    {
+        if(head == null)
+        {
+           System.out.print("empty list");
+        }
+        Node currnode = head;
+        while(currnode!= null)
+        {
+            System.out.print("--" + currnode.data);
+            currnode = currnode.next;
+        }
+
+    }
+
+    public  static void main(String[] args)
+    {
+        Main lkls = new Main();
+        lkls.addFirst("red");
+        lkls.addFirst("blue");
+        lkls.addFirst("green");
+        lkls.addLast("greenatlast");
+        lkls.printList();
+    }
+}
