@@ -1,0 +1,154 @@
+Stack Data structure-
+
+
+Lifo
+
+Add. To linked list
+
+New node.next = head;
+Head =newnode
+
+
+
+
+
+Removal
+
+
+
+Node n = head;
+head = head.next
+
+
+
+
+Implementation via linked list
+Code via liked list-
+
+class Main{
+    Node head = null;
+
+    class Node{
+        private int data;
+        Node next;
+
+        public Node(int data)
+        {
+            this.data= data;
+            this.next = null;
+        }
+    }
+
+    public boolean isEmpty(){
+        return head == null;
+    }
+
+    public void push(int data)
+    {
+        Node n = new Node(data);
+        if(isEmpty())
+        {
+            head = n;
+            return;
+        }
+        n.next = head;
+        head = n;
+    }
+
+    public int pop()
+    {
+        if(isEmpty())
+        {
+            return -1;
+        }
+        Node top = head;
+       head = head.next;
+        return top.data;
+    }
+
+    public int peek()
+    {
+
+        if(isEmpty())
+        {
+            return -1;
+        }
+        Node top = head;
+        return top.data;
+    }
+
+
+
+
+    public static  void main(String[] args)
+    {
+        Main m =new Main();
+        m.push(23);
+        m.push(24);
+        m.push(25);
+        m.push(26);
+        while(!m.isEmpty())
+        {
+            System.out.println(m.peek());
+            m.pop();
+        }
+        m.pop();
+        System.out.println("******");
+        while(!m.isEmpty())
+        {
+            System.out.println(m.peek());
+            m.pop();
+        }
+    }
+}
+
+
+
+Implementation using arraylist -
+
+
+import java.util.ArrayList;
+
+class Main{
+   ArrayList<Integer> al = new ArrayList<Integer>();
+
+   public void push(int data){
+       al.add(data);
+   }
+
+   public boolean isEmpty(){
+       return al.size() ==  0;
+   }
+
+    public int pop(){
+       if(isEmpty())
+       {
+           return -1;
+       }
+        int data = al.get(al.size()-1);
+        al.remove(al.size()- 1);
+        return data;
+
+    }
+
+    public int peek(){
+        int data = al.get(al.size()-1);
+        return data;
+    }
+
+
+    public static  void main(String[] args)
+    {
+      Main m = new Main();
+      m.push(23);
+        m.push(32);
+        m.push(42);
+        while(!m.isEmpty())
+        {
+            System.out.println(m.peek());
+            m.pop();
+        }
+
+    }
+}
+
