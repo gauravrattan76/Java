@@ -63,5 +63,137 @@ public class Main {
 Note: just like static attributes and methods, a static inner class does not have access to members of the outer class.
 
 
+In depth-
+
+Accessing classes in Java-
+
+
+Create a new file
+
+Outer.java
+
+class Outer{
+    int y = 34;
+}
+
+
+In main
+Main.java
+
+
+
+public class Main {
+   int x = 23;
+   public static void main(String[] args)
+   {
+       Main m = new Main();
+       System.out.println(m.x);
+       Outer o = new Outer();
+       System.out.println(o.y);
+   }
+}
+
+__________
+
+
+public class Main {
+   int x = 23;
+
+
+   public static void main(String[] args)
+   {
+       Main m = new Main();
+       System.out.println(m.x);
+       Outer o = new Outer();
+       Outer.Inner i = o.new Inner();
+       System.out.println(o.y);
+       System.out.println(i.s);
+   }
+}
+
+
+
+
+
+
+Create a class outside in same package 
+
+Create reference and start accessing
+
+
+Nested is like -
+
+
+Out o = new out()
+Out.inner I = o.new inn
+
+
+______________
+
+Normal access - 
+
+ class OuterClass {
+  int x = 10;
+
+  class InnerClass {
+    int y = 5;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+_______________________________
+
+
+Private Inner Class
+Unlike a "regular" class, an inner class can be private or protected. If you don't want outside objects to access the inner class, declare the class as private:
+
+
+class OuterClass {
+  int x = 10;
+
+  private class InnerClass {
+    int y = 5;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+
+
+_______
+
+
+An inner class can also be static, which means that you can access it without creating an object of the outer class:
+Example
+class OuterClass {
+  int x = 10;
+
+  static class InnerClass {
+    int y = 5;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass.InnerClass myInner = new OuterClass.InnerClass();
+    System.out.println(myInner.y);
+  }
+}
+
+
+
 
 
